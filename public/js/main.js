@@ -25,6 +25,7 @@ window.onload = function() {
             canvas.style.top = (window.innerHeight - H) / 2 + 'px';
             canvas.style.left = (window.innerWidth - W) / 2 + 'px';
             document.addEventListener('keydown', KeyBoard.keyPressed);
+            document.addEventListener('keyup', KeyBoard.keyReleased);
             run();
         },
         run = function() {
