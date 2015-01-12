@@ -15,7 +15,7 @@ var Snake = function() {
             }
         },
         eat = function(x, y) {
-            snake.tail.push(new Tail(x, y, snake.tail[snake.tail.length - 1] || snake, food.color));
+            snake.tail.push(new Tail(x, y, snake.tail[snake.tail.length - 1] || snake, '#FFF'));
         },
         hitTail = function() {
             for (var i = 0; i < snake.tail.length; i++) {

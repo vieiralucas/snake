@@ -14,10 +14,11 @@ var moveKeys = {
     },
     shift = false,
     buffer = [],
+    xDown = null,
+    yDown = null,
     KeyBoard = {};
 
 KeyBoard.keyPressed = function(key) {
-    console.log(key.which);
     if (keys[key.which] === 'esc') {
         buffer = [];
     } else if ((keys[key.which] === 'numPlus' || (shift && keys[key.which] === 'equals')) && speed > 2 ) {
@@ -35,6 +36,14 @@ KeyBoard.keyReleased = function(key) {
     if (keys[key.which] === 'shift') {
         shift = false;
     }
+};
+
+KeyBoard.touchStart = function(evt) {
+    controls.checkClick(evt.touches[0].clientX, evt.touches[0].clientY);
+};
+
+KeyBoard.click = function(evt) {
+    controls.checkClick(evt.clientX, evt.clientY);
 };
 
 KeyBoard.update = function() {

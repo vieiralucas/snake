@@ -1,13 +1,17 @@
-var W = window.innerWidth / 1.5,
-    H = window.innerHeight / 1.5,
+var W = window.innerWidth * 0.95,
+    H = window.innerHeight * 0.95,
     horizontalTiles = 32,
     verticalTiles = 18,
     frames = 0,
-    speed = 10,
+    speed = 6,
+
+    canvas = document.getElementById('canvas'),
+    ctx = canvas.getContext('2d'),
 
     snake = new Snake(),
     tiles = new Tiles(),
     food = new Food(),
+    controls = new Controls(),
 
     restart = function() {
         snake = new Snake();
@@ -15,17 +19,16 @@ var W = window.innerWidth / 1.5,
     };
 
 window.onload = function() {
-    var canvas = document.querySelector('canvas'),
-        ctx = canvas.getContext('2d'),
-
-        init = function() {
+    var init = function() {
             canvas.width = W;
             canvas.height = H;
-            canvas.style.position = 'absolute';
-            canvas.style.top = (window.innerHeight - H) / 2 + 'px';
-            canvas.style.left = (window.innerWidth - W) / 2 + 'px';
+            // canvas.style.position = 'absolute';
+            // canvas.style.top = (window.innerHeight - H) / 2 + 'px';
+            // canvas.style.left = (window.innerWidth - W) / 2 + 'px';
             document.addEventListener('keydown', KeyBoard.keyPressed);
             document.addEventListener('keyup', KeyBoard.keyReleased);
+            document.addEventListener('touchstart', KeyBoard.touchStart);
+            document.addEventListener('click', KeyBoard.click);
             run();
         },
         run = function() {
@@ -39,11 +42,12 @@ window.onload = function() {
         update = function() {
             KeyBoard.update();
             tiles.update();
-            snake.update();
             food.update();
+            snake.update();
         },
         draw = function() {
             tiles.draw(ctx);
+            controls.draw(ctx);
         };
 
     init();
