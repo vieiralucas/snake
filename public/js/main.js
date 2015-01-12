@@ -22,9 +22,6 @@ window.onload = function() {
     var init = function() {
             canvas.width = W;
             canvas.height = H;
-            // canvas.style.position = 'absolute';
-            // canvas.style.top = (window.innerHeight - H) / 2 + 'px';
-            // canvas.style.left = (window.innerWidth - W) / 2 + 'px';
             document.addEventListener('keydown', KeyBoard.keyPressed);
             document.addEventListener('keyup', KeyBoard.keyReleased);
             document.addEventListener('touchstart', KeyBoard.touchStart);

@@ -91,7 +91,6 @@ var Controls = function() {
     };
 
     controls.checkClick = function(x, y) {
-        console.log(x, y);
         if (controls.left.checkClick(x, y)) {
             controls.left.click();
         } else if (controls.right.checkClick(x, y)) {
