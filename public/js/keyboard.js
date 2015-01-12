@@ -17,11 +17,12 @@ var moveKeys = {
     KeyBoard = {};
 
 KeyBoard.keyPressed = function(key) {
+    console.log(key.which);
     if (keys[key.which] === 'esc') {
         buffer = [];
     } else if ((keys[key.which] === 'numPlus' || (shift && keys[key.which] === 'equals')) && speed > 2 ) {
         speed--;
-    } else if ((keys[key.which] === 'numMinus' || (shift && keys[key.which] === 'minus') )&& speed < 10) {
+    } else if ((keys[key.which] === 'numMinus' || (shift && keys[key.which] === 'minus')) && speed < 10) {
         speed++;
     } else if (keys[key.which] === 'shift') {
         shift = true;

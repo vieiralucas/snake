@@ -63,10 +63,10 @@ var Snake = function() {
     };
 
     snake.canGo = function(direction) {
-        return !(snake.direction === 'left' && direction === 'right'
-            || snake.direction === 'right' && direction === 'left'
-            || snake.direction === 'up' && direction === 'down'
-            || snake.direciton === 'down' && direction === 'up')
+        return !((snake.direction === 'left' && direction === 'right')
+            || (snake.direction === 'right' && direction === 'left')
+            || (snake.direction === 'up' && direction === 'down')
+            || (snake.direction === 'down' && direction === 'up'))
             && snake.direction !== direction;
     }
 
