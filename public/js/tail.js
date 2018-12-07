@@ -1,6 +1,6 @@
-var Tail = function(x, y, toFolow, color) {
+let Tail = function(x, y, toFolow, color) {
 
-    var tail = {
+    let tail = {
         x: x,
         y: y,
         nextX: toFolow.x,

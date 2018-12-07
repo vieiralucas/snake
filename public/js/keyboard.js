@@ -1,4 +1,4 @@
-var moveKeys = {
+let moveKeys = {
         '37': 'left',
         '38' : 'up',
         '39': 'right',
@@ -47,7 +47,7 @@ KeyBoard.click = function(evt) {
 };
 
 KeyBoard.update = function() {
-    var next = buffer.pop();
+    let next = buffer.pop();
     if (next) {
         snake.setDirection(next);
     }

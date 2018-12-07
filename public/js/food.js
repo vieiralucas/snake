@@ -1,6 +1,6 @@
-var Food = function() {
+let Food = function() {
 
-    var food = {
+    let food = {
         x: utils.getRandomInt(0, horizontalTiles - 1),
         y: utils.getRandomInt(0, verticalTiles - 1),
         color: utils.getRandomColor(),

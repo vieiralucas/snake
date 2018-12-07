@@ -1,4 +1,4 @@
-var W = window.innerWidth * 0.95,
+let W = window.innerWidth * 0.95,
     H = window.innerHeight * 0.95,
     horizontalTiles = 32,
     verticalTiles = 18,
@@ -19,7 +19,7 @@ var W = window.innerWidth * 0.95,
     };
 
 window.onload = function() {
-    var init = function() {
+    let init = function() {
             canvas.width = W;
             canvas.height = H;
             document.addEventListener('keydown', KeyBoard.keyPressed);
