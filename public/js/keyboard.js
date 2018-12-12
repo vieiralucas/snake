@@ -19,7 +19,6 @@ let shift = false,
     //the next ones are not used
     xDown = null,
     yDown = null;
-    // KeyBoard = {};
 
 KeyBoard.keyPressed = function(key) {
     if (keys[key.which] === 'esc') {
