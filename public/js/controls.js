@@ -1,6 +1,6 @@
-let Controls = function() {
+const Controls = function() {
 
-    let controls = {
+    const controls = {
         up: {
             x: W - ((W / horizontalTiles) * 5),
             y: H - ((H / verticalTiles) * 7),

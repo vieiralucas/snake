@@ -1,6 +1,6 @@
-let Food = function() {
+const Food = function() {
 
-    let food = {
+    const food = {
         x: utils.getRandomInt(0, horizontalTiles - 1),
         y: utils.getRandomInt(0, verticalTiles - 1),
         color: utils.getRandomColor(),

@@ -1,6 +1,6 @@
-let Tiles = function() {
+const Tiles = function() {
 
-    let actualTiles = [],
+    const actualTiles = [],
         tiles = {};
 
     for (let h = 0; h < horizontalTiles; h++) {

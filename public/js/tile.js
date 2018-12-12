@@ -1,6 +1,6 @@
-let Tile = function(x, y, w, h) {
+const Tile = function(x, y, w, h) {
 
-    let tile = {
+    const tile = {
         x: x,
         y: y,
         w: w,
