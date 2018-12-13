@@ -1,4 +1,4 @@
-var moveKeys = {
+const moveKeys = {
         '37': 'left',
         '38' : 'up',
         '39': 'right',
@@ -12,11 +12,12 @@ var moveKeys = {
         '187': 'equals',
         '189': 'minus'
     },
-    shift = false,
+    KeyBoard = {};
+
+let shift = false,
     buffer = [],
     xDown = null,
-    yDown = null,
-    KeyBoard = {};
+    yDown = null;
 
 KeyBoard.keyPressed = function(key) {
     if (keys[key.which] === 'esc') {
@@ -47,7 +48,7 @@ KeyBoard.click = function(evt) {
 };
 
 KeyBoard.update = function() {
-    var next = buffer.pop();
+    const next = buffer.pop();
     if (next) {
         snake.setDirection(next);
     }
