@@ -16,7 +16,6 @@ const moveKeys = {
 
 let shift = false,
     buffer = [],
-    //the next ones are not used
     xDown = null,
     yDown = null;
 
